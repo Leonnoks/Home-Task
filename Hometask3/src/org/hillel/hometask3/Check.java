@@ -2,23 +2,21 @@ package org.hillel.hometask3;
 
 
 public class Check {
-    public static int isEvenNum () {
-        int x = 15 & 1;
-        return x;
+    public static int isEvenNum (int number, int x) {
+        return number & x;
 
     }
     public static void isEvenNum2 (int a) {
-        int result = 33 & 1;
+        int result = 32 & 1;
         System.out.println(result);
 
     }
     public static void main(String[] args) {
-        int x = Check.isEvenNum();
-        System.out.println("15 & 1 =" + x);
 
-        Check.isEvenNum2 (1);
-        Check. log_or(1);
-        Check. log_xor(2);
+        System.out.println(isEvenNum(15, 1));
+        Check.isEvenNum2 (0);
+        Check. log_or(31);
+        Check. log_xor(35);
         System.out.println(log_not(7));
         System.out.println(sweep_right(14,2));
         System.out.println(sweep_left(12,1));
@@ -44,7 +42,7 @@ public class Check {
     }
     public static int sweep_right (int number, int h) {
 
-        return number << h; /*1110 << 11100*/
+        return number << h; /*1110 << 111000*/
     }
 
     }
