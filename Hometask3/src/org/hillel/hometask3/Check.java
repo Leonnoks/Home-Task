@@ -20,8 +20,8 @@ public class Check {
         Check. log_or(1);
         Check. log_xor(2);
         System.out.println(log_not(7));
-        Check.sweep_left(1);
         System.out.println(sweep_right(14,2));
+        System.out.println(sweep_left(12,1));
     }
     public static void log_or (int d) {
         int result = 22 | 13; /*10110
@@ -39,11 +39,11 @@ public class Check {
         return ~z; /* 0111
                      1000*/
     }
-    public static void sweep_left (int y){
-        int result = 12>>1; /*1100 >> 110*/
-        System.out.println(result);
+    public static int sweep_left (int number, int y){
+        return number >> y;    /* 1100 >> 110 */
     }
     public static int sweep_right (int number, int h) {
+
         return number << h; /*1110 << 11100*/
     }
 
